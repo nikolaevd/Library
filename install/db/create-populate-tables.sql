@@ -35,7 +35,7 @@ CREATE TABLE positions(
 	CONSTRAINT key_position PRIMARY KEY (id)
 )
 WITH ( OIDS=FALSE );
-ALTER TABLE employees OWNER TO postgres;
+ALTER TABLE positions OWNER TO postgres;
 
 INSERT INTO positions (id, position, salary, responsibility, requirements) VALUES (0, 'Библиотекарь', 30000, 'Ведение учета имеющихся в наличии и выданных книг', 'Грамотная речь, хорошее зрение, прописка');
 -- сделать 5 записей
