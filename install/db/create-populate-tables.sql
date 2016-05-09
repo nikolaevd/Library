@@ -1,29 +1,4 @@
 ----------------------------------------------------
--- Table: employees
-----------------------------------------------------
-
-CREATE TABLE employees(
-	id integer NOT NULL,
-	name varchar(32) NOT NULL,
-	age integer,
-	sex varchar(10),
-	address varchar(64),
-	phone varchar(11),
-	passport varchar(32),
-	position_id integer,
-	CONSTRAINT key_employee PRIMARY KEY (id),
-	CONSTRAINT key_position_id FOREIGN KEY (position_id)
-		REFERENCES positions (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
-)
-WITH ( OIDS=FALSE );
-ALTER TABLE employees OWNER TO postgres;
-	
-INSERT INTO employees (id, name, age, sex, address, phone, passport, position_id) VALUES (0, 'Петров Андрей Иванович', 40, 'мужчина', 'Москва, Партизанская улица, дом 3', '89261002002233', '4500 666333', 0);
-
--- сделать 10 записей
--- переопределить тип данных для поля phone
-
-----------------------------------------------------
 -- Table: positions
 ----------------------------------------------------
 
@@ -43,6 +18,33 @@ INSERT INTO positions (id, position, salary, responsibility, requirements) VALUE
 -- сделать 5 записей
 
 ----------------------------------------------------
+-- Table: employees
+----------------------------------------------------
+
+CREATE TABLE employees(
+	id integer NOT NULL,
+	name varchar(32) NOT NULL,
+	age integer,
+	sex varchar(10),
+	address varchar(64),
+	phone varchar(16),
+	passport varchar(32),
+	position_id integer,
+	CONSTRAINT key_employee PRIMARY KEY (id),
+	CONSTRAINT key_position_id FOREIGN KEY (position_id)
+		REFERENCES positions (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH ( OIDS=FALSE );
+ALTER TABLE employees OWNER TO postgres;
+	
+INSERT INTO employees (id, name, age, sex, address, phone, passport, position_id) VALUES (0, 'Петров Андрей Иванович', 40, 'мужчина', 'Москва, Партизанская улица, дом 3', '89261002002233', '4500 666333', 0);
+
+-- сделать 10 записей
+-- переопределить тип данных для поля phone
+
+
+
+----------------------------------------------------
 -- Table: publishing_house
 ----------------------------------------------------
 
@@ -54,7 +56,7 @@ CREATE TABLE publishing_house(
 	CONSTRAINT key_publishing_house PRIMARY KEY (id) 
 )
 WITH ( OIDS=FALSE );
-ALTER TABLE employees OWNER TO postgres;
+ALTER TABLE publishing_house OWNER TO postgres;
 
 -- сделать 5 записей
 
@@ -69,7 +71,7 @@ CREATE TABLE genres(
 	CONSTRAINT key_gengre PRIMARY KEY(id)
 )
 WITH ( OIDS=FALSE );
-ALTER TABLE employees OWNER TO postgres;
+ALTER TABLE genres OWNER TO postgres;
 
 -- сделать 5 записей
 
@@ -91,7 +93,7 @@ CREATE TABLE books(
 		REFERENCES genres(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
 )
 WITH ( OIDS=FALSE );
-ALTER TABLE employees OWNER TO postgres;
+ALTER TABLE books OWNER TO postgres;
 
 -- сделать 10 записей
 
@@ -110,7 +112,7 @@ CREATE TABLE readership(
 	CONSTRAINT key_readership PRIMARY KEY(id)
 )
 WITH ( OIDS=FALSE );
-ALTER TABLE employees OWNER TO postgres;
+ALTER TABLE readership OWNER TO postgres;
 
 -- сделать 10 записей
 
@@ -123,15 +125,15 @@ CREATE TABLE issued_books(
 	readership_id integer NOT NULL,
 	date_of_issue varchar(16),
 	is_returned boolean,
-	employee_id id NOT NULL,
+	employee_id integer,
 	CONSTRAINT key_book_id FOREIGN KEY(book_id)
 		REFERENCES books(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION,
-	CONSTRAINT key key_readership_id FOREIGN KEY(readership_id)
+	CONSTRAINT key_readership_id FOREIGN KEY(readership_id)
 		REFERENCES readership(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION,
-	CONSTRAINT key key_employee_id FOREIGN KEY(employee_id)
+	CONSTRAINT key_employee_id FOREIGN KEY(employee_id)
 		REFERENCES employees(id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
 )
 WITH ( OIDS=FALSE );
-ALTER TABLE employees OWNER TO postgres;
+ALTER TABLE issued_books OWNER TO postgres;
 
 -- сделать 10 записей
