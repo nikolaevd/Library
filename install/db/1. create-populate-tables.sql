@@ -5,7 +5,7 @@
 CREATE TABLE positions(
 	id integer NOT NULL,
 	position varchar(32) NOT NULL,
-	salary integer NOT NULL,
+	salary integer,
 	responsibility varchar(64),
 	requirements varchar(64),
 	CONSTRAINT key_position PRIMARY KEY (id)
@@ -84,7 +84,7 @@ CREATE TABLE books(
 	name varchar(32) NOT NULL,
 	author varchar(32),
 	publishing_house_id integer,
-	date_of_publishing integer,
+	date_of_publishing date,
 	genre_id integer,
 	CONSTRAINT key_book PRIMARY KEY(id),
 	CONSTRAINT key_publishing_house_id FOREIGN KEY(publishing_house_id)
@@ -104,7 +104,7 @@ ALTER TABLE books OWNER TO postgres;
 CREATE TABLE readership(
 	id integer NOT NULL,
 	name varchar(64) NOT NULL,
-	birthday varchar(16),
+	birthday date,
 	sex varchar(10),
 	address varchar(64),
 	phone varchar(10),
@@ -123,7 +123,7 @@ ALTER TABLE readership OWNER TO postgres;
 CREATE TABLE issued_books(
 	book_id integer NOT NULL,
 	readership_id integer NOT NULL,
-	date_of_issue varchar(16),
+	date_of_issue date,
 	is_returned boolean,
 	employee_id integer,
 	CONSTRAINT key_book_id FOREIGN KEY(book_id)
