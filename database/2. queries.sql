@@ -2,7 +2,7 @@
 -- Query: вывести всю информацию о сотрудниках
 ----------------------------------------------------
 
-SELECT e.name, e.age, e.sex, e.address, e.phone, e.passport, p.position, p.salary, p.responsibility, p.requirements
+SELECT e.name, e.age, e.gender, e.address, e.phone, e.passport, p.position, p.salary, p.responsibility, p.requirements
 FROM employees e
 	JOIN positions p ON p.id = e.position_id; 
 
