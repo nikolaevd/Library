@@ -39,7 +39,7 @@ CREATE TABLE employees(
 WITH ( OIDS=FALSE );
 ALTER TABLE employees OWNER TO postgres;
 	
-INSERT INTO employees (id, name, age, sex, address, phone, passport, position_id) VALUES (0, 'Петров Андрей Иванович', 40, 'мужчина', 'Москва, Партизанская улица, дом 3', '89261002002233', '4500 666333', 0);
+INSERT INTO employees (id, name, age, sex, address, phone, passport, position_id) VALUES (0, 'Петров Андрей Иванович', 40, 'мужчина', 'Москва, Партизанская улица, дом 3', '89262002233', '4500 666333', 0);
 INSERT INTO employees (id, name, age, sex, address, phone, passport, position_id) VALUES (1, 'Кревенко Семен Валентинович', 29, 'мужчина', 'Москва, Проспект Буденова, дом 31', '89031235434', '4501 662333', 0);
 INSERT INTO employees (id, name, age, sex, address, phone, passport, position_id) VALUES (2, 'Горячева Вероника Вячеславовна', 22, 'женщина', 'Москва, Ленинградский проспект, дом 22', '89064435434', '4601 112333', 0);
 INSERT INTO employees (id, name, age, sex, address, phone, passport, position_id) VALUES (3, 'Суворова Антонина Александровна', 30, 'женщина', 'Москва, Дмитровское шоссе, дом 54', '89012235134', '4301 942033', 0);
@@ -169,12 +169,12 @@ WITH ( OIDS=FALSE );
 ALTER TABLE issued_books OWNER TO postgres;
 
 INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (0, 0, '2016-03-21', false, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (2, 0, '2016-04-01', false, 3);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (3, 1, '2015-09-10', true, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (4, 1, '2016-01-10', false, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (5, 2, '2016-02-10', true, 0);
+INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (2, 0, '2016-04-01', false, 0);
+INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (3, 1, '2015-09-10', true, 1);
+INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (4, 1, '2016-01-10', false, 2);
+INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (5, 2, '2016-02-10', true, 3);
 INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (3, 3, '2016-03-21', false, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (6, 5, '2016-01-13', false, 3);
+INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (6, 5, '2016-01-13', false, 2);
 INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (7, 6, '2015-09-30', false, 3);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (8, 8, '2015-12-30', false, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (9, 9, '2016-02-28', true, 0);
+INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (8, 8, '2015-12-30', false, 1);
+INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (9, 9, '2016-02-28', true, 4);
