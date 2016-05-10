@@ -117,7 +117,7 @@ INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, ge
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (5, 'Айвенго', 'Вальтер Скотт', 1, '2010-06-15', 3);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (6, 'Беовульф', 'Неизвестен', 2, '2015-03-10', 0);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (7, 'Generation П', 'Виктор Пелевин', 4, '2013-01-08', 4);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (8, 'Сон в летнюю ночь', 'Уильям Шекспир', 3, '2013-01-08', 1);
+INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (8, 'Сон в летнюю ночь', 'Уильям Шекспир', 3, '2013-01-08', 3);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (9, 'Гамлет', 'Уильям Шекспир', 3, '2010-02-13', 3);
 
 ----------------------------------------------------
