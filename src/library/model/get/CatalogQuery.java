@@ -7,6 +7,7 @@ package library.model.get;
 
 import library.model.LibraryDB;
 import java.sql.*;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -19,9 +20,15 @@ public class CatalogQuery {
     
     public List<CatalogData> getData(){
         
+        dataList = new LinkedList<CatalogData>();
+        
         try(Connection connection = new LibraryDB().getConnection()){
             
-            String sql = "";
+            String sql = "SELECT b.name, b.author, b.date_of_publishing, " + 
+                    "g.name, g.description, p.name, p.city, p.address\n" +
+                    "FROM books b\n" +
+                    "JOIN publishing_house p ON p.id = b.publishing_house_id\n" +
+                    "JOIN genres g ON g.id = b.genre_id;";
             
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);

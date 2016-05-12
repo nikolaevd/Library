@@ -13,9 +13,9 @@ import java.sql.*;
  */
 public class LibraryDB {
     
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/library";
-    static final String USER = "postgres";
-    static final String PASSWORD = "postgres";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/library";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "Iqex1234";
     
     public Connection getConnection() throws SQLException, ClassNotFoundException{
         
