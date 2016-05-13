@@ -35,7 +35,10 @@ public class CatalogQuery {
             
             while(resultSet.next()){
                 CatalogData data = new CatalogData();
-                data.setName(resultSet.getString("name"));
+                data.setName(resultSet.getString(1));
+                data.setAuthor(resultSet.getString(2));
+                data.setGenre(resultSet.getString(4));
+                data.setPublishingHouse(resultSet.getString(6));
                 // и т.д.
                 dataList.add(data);
             }
