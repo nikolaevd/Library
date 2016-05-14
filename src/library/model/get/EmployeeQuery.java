@@ -12,38 +12,35 @@ import java.util.List;
 
 /**
  *
- * @author nikol_000
+ * @author Nikolaev
  */
-public class CatalogQuery {
+public class EmployeeQuery {
     
-    private List<CatalogData> dataList;
+    private List<EmployeeData> dataList;
     private String sql;
     
-    public List<CatalogData> getData(){
+    public List<EmployeeData> getData(){
+      
+        dataList = new LinkedList<EmployeeData>();
         
-        dataList = new LinkedList<CatalogData>();
-        
-        sql = "SELECT b.name, b.author, b.date_of_publishing, " + 
-                    "g.name, g.description, p.name, p.city, p.address\n" +
-                    "FROM books b\n" +
-                    "JOIN publishing_house p ON p.id = b.publishing_house_id\n" +
-                    "JOIN genres g ON g.id = b.genre_id;";
+        sql = "SELECT e.name, e.age, e.gender, e.address, e.phone, " + 
+                    "e.passport, p.position, p.salary, p.responsibility, p.requirements\n " +
+                    "FROM employees e\n" +
+                    "	JOIN positions p ON p.id = e.position_id;";
         
         try(Connection connection = new LibraryDB().getConnection()){
-            
+
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             
             while(resultSet.next()){
-                CatalogData data = new CatalogData();
-                data.setName(resultSet.getString(1));
-                data.setAuthor(resultSet.getString(2));
-                data.setGenre(resultSet.getString(4));
-                data.setPublishingHouse(resultSet.getString(6));
-                // и т.д.
+                EmployeeData data = new EmployeeData();
+                data.setName(resultSet.getString(0));
+                data.setPhone(resultSet.getString(5));
+                data.setAddress(resultSet.getString(4));
+                data.setSalary(resultSet.getString(7));
                 dataList.add(data);
             }
-            
         }
         catch(SQLException e){
             e.printStackTrace();
@@ -56,16 +53,18 @@ public class CatalogQuery {
         }
         
         return dataList;
+        
     }
     
-    public List<CatalogData> getData(String field, String value){
-        
-        dataList = new LinkedList<CatalogData>();
+    public List<EmployeeData> getData(String field, String value){
+      
+        dataList = new LinkedList<EmployeeData>();
         
         switch(field){
             case("position"):
                 sql = "SELECT e.name, e.age, e.gender, e.address, e.phone, " +
-                        "e.passport, p.position, p.salary, p.responsibility, p.requirements\n" +
+                        "e.passport, p.position, p.salary, p.responsibility, " +
+                        "p.requirements\n" +
                         "FROM employees e\n" +
                         "	JOIN positions p ON p.id = e.position_id\n" +
                         "WHERE p.position = '" + value + "'";
@@ -75,20 +74,18 @@ public class CatalogQuery {
         }
         
         try(Connection connection = new LibraryDB().getConnection()){
-            
+
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             
             while(resultSet.next()){
-                CatalogData data = new CatalogData();
+                EmployeeData data = new EmployeeData();
                 data.setName(resultSet.getString(1));
-                data.setAuthor(resultSet.getString(2));
-                data.setGenre(resultSet.getString(4));
-                data.setPublishingHouse(resultSet.getString(6));
-                // и т.д.
+                data.setPhone(resultSet.getString(5));
+                data.setAddress(resultSet.getString(4));
+                data.setSalary(resultSet.getString(8));
                 dataList.add(data);
             }
-            
         }
         catch(SQLException e){
             e.printStackTrace();
@@ -101,5 +98,7 @@ public class CatalogQuery {
         }
         
         return dataList;
+        
     }
+    
 }
