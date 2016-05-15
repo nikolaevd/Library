@@ -36,8 +36,10 @@ public class WindowsForm extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -62,25 +64,24 @@ public class WindowsForm extends javax.swing.JFrame {
         setResizable(false);
 
         jLabel3.setVisible(false);
-        CatalogQuery query = new CatalogQuery();
-        List<CatalogData> list = query.getData();
-        if(list.isEmpty()){
+        List<CatalogData> catDataList = new CatalogQuery().getData();
+        if(catDataList.isEmpty()){
             jScrollPane1.setVisible(false);
             jLabel3.setVisible(true);
         }
-        Object[][] obj = new Object[list.size()][8];
-        for(int i = 0; i < list.size(); i++){
-            obj[i][0] = list.get(i).getName();
-            obj[i][1] = list.get(i).getAuthor();
-            obj[i][2] = list.get(i).getDate();
-            obj[i][3] = list.get(i).getGenre();
-            obj[i][4] = list.get(i).getDescription();
-            obj[i][5] = list.get(i).getPublishingHouse();
-            obj[i][6] = list.get(i).getCity();
-            obj[i][7] = list.get(i).getAddress();
+        Object[][] catDataObj = new Object[catDataList.size()][8];
+        for(int i = 0; i < catDataList.size(); i++){
+            catDataObj[i][0] = catDataList.get(i).getName();
+            catDataObj[i][1] = catDataList.get(i).getAuthor();
+            catDataObj[i][2] = catDataList.get(i).getDate();
+            catDataObj[i][3] = catDataList.get(i).getGenre();
+            catDataObj[i][4] = catDataList.get(i).getDescription();
+            catDataObj[i][5] = catDataList.get(i).getPublishingHouse();
+            catDataObj[i][6] = catDataList.get(i).getCity();
+            catDataObj[i][7] = catDataList.get(i).getAddress();
         }
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            obj,
+            catDataObj,
             new String [] {
                 "Книга", "Автор", "Дата издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
             }
@@ -101,7 +102,7 @@ public class WindowsForm extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel3)
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +130,36 @@ public class WindowsForm extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jTabbedPane1.addTab("Выданные книги", jScrollPane2);
+        jLabel4.setText("Простите, но я не смог получить данные... :( Пожалуйста, убедитесь в корректности настройки подключения к базе.");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel4)
+                .addContainerGap(158, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(268, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(65, 65, 65))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(176, Short.MAX_VALUE)))
+        );
+
+        jTabbedPane1.addTab("Выданные книги", jPanel5);
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,7 +212,7 @@ public class WindowsForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -243,7 +273,7 @@ public class WindowsForm extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel2)
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,7 +293,7 @@ public class WindowsForm extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 790, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,10 +397,12 @@ public class WindowsForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

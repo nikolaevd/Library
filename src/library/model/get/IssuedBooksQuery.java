@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Nikolaev
  */
-public class IssuedBookQuery {
+public class IssuedBooksQuery {
     
     private List<IssuedBooksData> dataList;
     private String sql;

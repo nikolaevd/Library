@@ -68,7 +68,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="138" max="32767" attributes="0"/>
+                      <EmptySpace pref="158" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -95,12 +95,12 @@
                 <Component class="javax.swing.JTable" name="jTable1">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    obj,&#xa;    new String [] {&#xa;        &quot;&#x41a;&#x43d;&#x438;&#x433;&#x430;&quot;, &quot;&#x410;&#x432;&#x442;&#x43e;&#x440;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x438;&#x437;&#x434;&#x430;&#x43d;&#x438;&#x44f;&quot;, &quot;&#x416;&#x430;&#x43d;&#x440;&quot;, &quot;&#x41e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435;&quot;, &quot;&#x418;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x441;&#x442;&#x432;&#x43e;&quot;, &quot;&#x413;&#x43e;&#x440;&#x43e;&#x434;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;&#xa;    }&#xa;)" type="code"/>
+                      <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    catDataObj,&#xa;    new String [] {&#xa;        &quot;&#x41a;&#x43d;&#x438;&#x433;&#x430;&quot;, &quot;&#x410;&#x432;&#x442;&#x43e;&#x440;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x438;&#x437;&#x434;&#x430;&#x43d;&#x438;&#x44f;&quot;, &quot;&#x416;&#x430;&#x43d;&#x440;&quot;, &quot;&#x41e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435;&quot;, &quot;&#x418;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x441;&#x442;&#x432;&#x43e;&quot;, &quot;&#x413;&#x43e;&#x440;&#x43e;&#x434;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;&#xa;    }&#xa;)" type="code"/>
                     </Property>
                     <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                   </Properties>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLabel3.setVisible(false);&#xa;CatalogQuery query = new CatalogQuery();&#xa;List&lt;CatalogData&gt; list = query.getData();&#xa;if(list.isEmpty()){&#xa;    jScrollPane1.setVisible(false);&#xa;    jLabel3.setVisible(true);&#xa;}&#xa;Object[][] obj = new Object[list.size()][8];&#xa;for(int i = 0; i &lt; list.size(); i++){&#xa;    obj[i][0] = list.get(i).getName();&#xa;    obj[i][1] = list.get(i).getAuthor();&#xa;    obj[i][2] = list.get(i).getDate();&#xa;    obj[i][3] = list.get(i).getGenre();&#xa;    obj[i][4] = list.get(i).getDescription();&#xa;    obj[i][5] = list.get(i).getPublishingHouse();&#xa;    obj[i][6] = list.get(i).getCity();&#xa;    obj[i][7] = list.get(i).getAddress();&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLabel3.setVisible(false);&#xa;List&lt;CatalogData&gt; catDataList = new CatalogQuery().getData();&#xa;if(catDataList.isEmpty()){&#xa;    jScrollPane1.setVisible(false);&#xa;    jLabel3.setVisible(true);&#xa;}&#xa;Object[][] catDataObj = new Object[catDataList.size()][8];&#xa;for(int i = 0; i &lt; catDataList.size(); i++){&#xa;    catDataObj[i][0] = catDataList.get(i).getName();&#xa;    catDataObj[i][1] = catDataList.get(i).getAuthor();&#xa;    catDataObj[i][2] = catDataList.get(i).getDate();&#xa;    catDataObj[i][3] = catDataList.get(i).getGenre();&#xa;    catDataObj[i][4] = catDataList.get(i).getDescription();&#xa;    catDataObj[i][5] = catDataList.get(i).getPublishingHouse();&#xa;    catDataObj[i][6] = catDataList.get(i).getCity();&#xa;    catDataObj[i][7] = catDataList.get(i).getAddress();&#xa;}"/>
                   </AuxValues>
                 </Component>
               </SubComponents>
@@ -112,10 +112,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
+        <Container class="javax.swing.JPanel" name="jPanel5">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="&#x412;&#x44b;&#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43a;&#x43d;&#x438;&#x433;&#x438;">
@@ -124,13 +121,60 @@
             </Constraint>
           </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="158" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="795" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="268" max="32767" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="160" max="-2" attributes="0"/>
+                          <EmptySpace pref="176" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable2">
+            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="jTable2">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Title 1&quot;, &quot;Title 2&quot;, &quot;Title 3&quot;, &quot;Title 4&quot;, &quot;Title 5&quot;&#xa;    }&#xa;)" type="code"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
-                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Title 1&quot;, &quot;Title 2&quot;, &quot;Title 3&quot;, &quot;Title 4&quot;, &quot;Title 5&quot;&#xa;    }&#xa;)" type="code"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x441;&#x442;&#x438;&#x442;&#x435;, &#x43d;&#x43e; &#x44f; &#x43d;&#x435; &#x441;&#x43c;&#x43e;&#x433; &#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x438;&#x442;&#x44c; &#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435;... :( &#x41f;&#x43e;&#x436;&#x430;&#x43b;&#x443;&#x439;&#x441;&#x442;&#x430;, &#x443;&#x431;&#x435;&#x434;&#x438;&#x442;&#x435;&#x441;&#x44c; &#x432; &#x43a;&#x43e;&#x440;&#x440;&#x435;&#x43a;&#x442;&#x43d;&#x43e;&#x441;&#x442;&#x438; &#x43d;&#x430;&#x441;&#x442;&#x440;&#x43e;&#x439;&#x43a;&#x438; &#x43f;&#x43e;&#x434;&#x43a;&#x43b;&#x44e;&#x447;&#x435;&#x43d;&#x438;&#x44f; &#x43a; &#x431;&#x430;&#x437;&#x435;."/>
               </Properties>
             </Component>
           </SubComponents>
@@ -189,7 +233,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane4" pref="770" max="32767" attributes="0"/>
+                              <Component id="jScrollPane4" pref="790" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -293,7 +337,7 @@
                                   <Component id="jScrollPane5" min="-2" pref="536" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="57" max="32767" attributes="0"/>
+                          <EmptySpace pref="237" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -356,7 +400,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="790" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="810" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
