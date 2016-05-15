@@ -243,7 +243,7 @@ public class WindowsForm extends javax.swing.JFrame {
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             employeeDataObj,
             new String [] {
-                "ФИО", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Должность", "Оклад", "Ответственность", "Требования"
+                "ФИО", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Должность", "Оклад", "Обязанности", "Требования"
             }
         ));
         jScrollPane3.setViewportView(jTable3);
@@ -299,7 +299,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Имя", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Должность", "Оклад", "Ответсвенность", "Требования"
+                "Имя", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Должность", "Оклад", "Обязанности", "Требования"
             }
         ));
         jScrollPane4.setViewportView(jTable4);
@@ -645,7 +645,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Оклад", "Ответственность", "Требования"
+                "Id", "Должность", "Оклад", "Обязанности", "Требования"
             }
         ));
         jTable5.setCellSelectionEnabled(true);
@@ -1055,7 +1055,7 @@ public class WindowsForm extends javax.swing.JFrame {
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
                 obj,
                 new String [] {
-                        "Имя", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Должность", "Оклад", "Ответсвенность", "Требования"
+                        "Имя", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Должность", "Оклад", "Обяазнности", "Требования"
                 }
         ));
     }//GEN-LAST:event_jButton2ActionPerformed
