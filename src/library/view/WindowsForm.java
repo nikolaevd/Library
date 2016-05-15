@@ -40,8 +40,10 @@ public class WindowsForm extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -89,7 +91,7 @@ public class WindowsForm extends javax.swing.JFrame {
         jTable1.setCellSelectionEnabled(true);
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel3.setText("Простите, но я не смог получить данные... :( Пожалуйста, убедитесь в корректности настройки подключения к базе.");
+        jLabel3.setText("Простите, но я не смог получить данные... :( Пожалуйста, убедитесь в корректности подключения к базе данных.");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -102,7 +104,7 @@ public class WindowsForm extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel3)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,21 +118,30 @@ public class WindowsForm extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Каталог", jPanel4);
 
+        jLabel4.setVisible(false);
+        List<IssuedBooksData> issuedBooksList = new IssuedBooksQuery().getData();
+        if(issuedBooksList.isEmpty()){
+            jScrollPane2.setVisible(false);
+            jLabel4.setVisible(true);
+        }
+        Object[][] IssuedBooksObj = new Object[issuedBooksList.size()][6];
+        for(int i = 0; i < issuedBooksList.size(); i++){
+            IssuedBooksObj[i][0] = issuedBooksList.get(i).getBook();
+            IssuedBooksObj[i][1] = issuedBooksList.get(i).getAuthor();
+            IssuedBooksObj[i][2] = issuedBooksList.get(i).getReader();
+            IssuedBooksObj[i][3] = issuedBooksList.get(i).getPhone();
+            IssuedBooksObj[i][4] = issuedBooksList.get(i).getAddress();
+            IssuedBooksObj[i][5] = issuedBooksList.get(i).getDate();
+        }
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
+            IssuedBooksObj,
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
+                "Книга", "Автор", "Читатель", "Телефон", "Адрес", "Дата выдачи"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel4.setText("Простите, но я не смог получить данные... :( Пожалуйста, убедитесь в корректности настройки подключения к базе.");
+        jLabel4.setText("Простите, но я не смог получить данные... :( Пожалуйста, убедитесь в корректности подключения к базе данных.");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -139,42 +150,81 @@ public class WindowsForm extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel4)
-                .addContainerGap(158, Short.MAX_VALUE))
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(172, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(268, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(65, 65, 65))
-            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(176, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("Выданные книги", jPanel5);
 
+        jLabel5.setVisible(false);
+        List<EmployeeData> employeeDataList = new EmployeeQuery().getData();
+        if(employeeDataList.isEmpty()){
+            jScrollPane3.setVisible(false);
+            jLabel5.setVisible(true);
+        }
+        Object[][] employeeDataObj = new Object[employeeDataList.size()][10];
+        for(int i = 0; i < employeeDataList.size(); i++){
+            employeeDataObj[i][0] = employeeDataList.get(i).getName();
+            employeeDataObj[i][1] = employeeDataList.get(i).getAge();
+            employeeDataObj[i][2] = employeeDataList.get(i).getGender();
+            employeeDataObj[i][3] = employeeDataList.get(i).getAddress();
+            employeeDataObj[i][4] = employeeDataList.get(i).getPhone();
+            employeeDataObj[i][5] = employeeDataList.get(i).getPassport();
+            employeeDataObj[i][6] = employeeDataList.get(i).getPosition();
+            employeeDataObj[i][7] = employeeDataList.get(i).getSalary();
+            employeeDataObj[i][8] = employeeDataList.get(i).getResponsibility();
+            employeeDataObj[i][9] = employeeDataList.get(i).getRequirements();
+        }
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
+            employeeDataObj,
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ФИО", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Должность", "Оклад", "Ответственность", "Требования"
             }
         ));
         jScrollPane3.setViewportView(jTable3);
 
-        jTabbedPane1.addTab("Сотрудники", jScrollPane3);
+        jLabel5.setText("Простите, но я не смог получить данные... :( Пожалуйста, убедитесь в корректности подключения к базе данных.");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel5)
+                .addContainerGap(172, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(268, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(65, 65, 65))
+            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(176, Short.MAX_VALUE)))
+        );
+
+        jTabbedPane1.addTab("Сотрудники", jPanel6);
 
         jLabel1.setText("Пожалуйста, введите название должности");
 
@@ -312,7 +362,7 @@ public class WindowsForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         getAccessibleContext().setAccessibleName("Library");
@@ -398,11 +448,13 @@ public class WindowsForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
