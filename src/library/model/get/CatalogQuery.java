@@ -21,7 +21,7 @@ public class CatalogQuery {
     
     public List<CatalogData> getData(){
         
-        dataList = new LinkedList<CatalogData>();
+        dataList = new LinkedList<>();
         
         sql = "SELECT b.name, b.author, b.date_of_publishing, " + 
                     "g.name, g.description, p.name, p.city, p.address\n" +
@@ -38,9 +38,12 @@ public class CatalogQuery {
                 CatalogData data = new CatalogData();
                 data.setName(resultSet.getString(1));
                 data.setAuthor(resultSet.getString(2));
+                data.setDate(resultSet.getString(3));
                 data.setGenre(resultSet.getString(4));
+                data.setDescription(resultSet.getString(5));
                 data.setPublishingHouse(resultSet.getString(6));
-                // и т.д.
+                data.setCity(resultSet.getString(7));
+                data.setAddress(resultSet.getString(8));
                 dataList.add(data);
             }
             
@@ -60,7 +63,7 @@ public class CatalogQuery {
     
     public List<CatalogData> getData(String field, String value){
         
-        dataList = new LinkedList<CatalogData>();
+        dataList = new LinkedList<>();
         
         switch(field){
             case("position"):

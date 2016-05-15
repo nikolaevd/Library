@@ -56,22 +56,26 @@ public class WindowsForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Библиотека");
         setForeground(java.awt.Color.white);
-        setPreferredSize(new java.awt.Dimension(640, 480));
+        setPreferredSize(new java.awt.Dimension(800, 375));
         setResizable(false);
 
         CatalogQuery query = new CatalogQuery();
         List<CatalogData> list = query.getData();
-        Object[][] obj = new Object[list.size()][4];
+        Object[][] obj = new Object[list.size()][8];
         for(int i = 0; i < list.size(); i++){
             obj[i][0] = list.get(i).getName();
             obj[i][1] = list.get(i).getAuthor();
-            obj[i][2] = list.get(i).getGenre();
-            obj[i][3] = list.get(i).getPublishingHouse();
+            obj[i][2] = list.get(i).getDate();
+            obj[i][3] = list.get(i).getGenre();
+            obj[i][4] = list.get(i).getDescription();
+            obj[i][5] = list.get(i).getPublishingHouse();
+            obj[i][6] = list.get(i).getCity();
+            obj[i][7] = list.get(i).getAddress();
         }
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             obj,
             new String [] {
-                "Книга", "Автор", "Жанр", "Издательский дом"
+                "Книга", "Автор", "Дата издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
             }
         ));
         jTable1.setCellSelectionEnabled(true);
@@ -146,7 +150,7 @@ public class WindowsForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -166,7 +170,7 @@ public class WindowsForm extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Сотрудники по должностям", jPanel1);
@@ -218,7 +222,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Должности", jPanel2);
@@ -227,11 +231,11 @@ public class WindowsForm extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGap(0, 790, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 266, Short.MAX_VALUE)
+            .addGap(0, 319, Short.MAX_VALUE)
         );
 
         jTabbedPane3.addTab("Сотрудники", jPanel3);
@@ -246,9 +250,7 @@ public class WindowsForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
         );
 
         getAccessibleContext().setAccessibleName("Library");

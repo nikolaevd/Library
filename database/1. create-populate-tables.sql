@@ -83,7 +83,7 @@ CREATE TABLE genres(
 WITH ( OIDS=FALSE );
 ALTER TABLE genres OWNER TO postgres;
 
-INSERT INTO genres(id, name, description) VALUES (0, 'Античная литература', 'это литература древних греков и римлян, состоящая из двух национальных литератур: древнегреческой и древнеримской.');
+INSERT INTO genres(id, name, description) VALUES (0, 'Античная литература', 'Литература древних греков и римлян, состоящая из двух национальных литератур: древнегреческой и древнеримской.');
 INSERT INTO genres(id, name, description) VALUES (1, 'Литература XIX века', 'Литература 19 века развивалась в двух основных направлениях, это литература романтизма и литература реализма.');
 INSERT INTO genres(id, name, description) VALUES (2, 'Литература Средневековья', 'Зарождение и развитие литературы Средневековья определяется тремя основными факторами: традициями народного творчества, культурным влиянием античного мира и христианством.');
 INSERT INTO genres(id, name, description) VALUES (3, 'Литература Просвещения', 'Литература эпохи Просвещения характеризуется поворотом к рационализму. Для этого периода характерна вера в прогресс и всемогущество человеческого разума.');
@@ -113,9 +113,9 @@ INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, ge
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (1, 'Дон Кихот', 'Мигель де Сервантес Сааведра', 3, '2014-07-01', 3);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (2, 'Приключения Тома Сойера', 'Марк Твен', 1, '2010-01-20', 4);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (3, 'Одиссея', 'Гомер', 0, '2011-02-23', 0);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (4, 'Илиада', 'Гомер', 0, '2009-09-15', 2);
+INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (4, 'Илиада', 'Гомер', 0, '2009-09-15', 0);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (5, 'Айвенго', 'Вальтер Скотт', 1, '2010-06-15', 3);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (6, 'Беовульф', 'Неизвестен', 2, '2015-03-10', 0);
+INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (6, 'Беовульф', 'Неизвестен', 2, '2015-03-10', 2);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (7, 'Generation П', 'Виктор Пелевин', 4, '2013-01-08', 4);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (8, 'Сон в летнюю ночь', 'Уильям Шекспир', 3, '2013-01-08', 3);
 INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (9, 'Гамлет', 'Уильям Шекспир', 3, '2010-02-13', 3);
