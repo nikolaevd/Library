@@ -648,7 +648,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Зарплата", "Ответсвенность"
+                "Id", "Должность", "Оклад", "Ответственность", "Требования"
             }
         ));
         jTable5.setCellSelectionEnabled(true);
@@ -702,7 +702,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Зарплата", "Ответсвенность"
+                "Id", "ФИО", "Возраст", "Адрес", "Телефон", "Паспорт", "Id должности"
             }
         ));
         jTable11.setCellSelectionEnabled(true);
@@ -756,7 +756,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Зарплата", "Ответсвенность"
+                "Id", "Название издательства", "Город", "Адрес"
             }
         ));
         jTable12.setCellSelectionEnabled(true);
@@ -810,7 +810,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Зарплата", "Ответсвенность"
+                "Id", "Жанр", "Описание"
             }
         ));
         jTable13.setCellSelectionEnabled(true);
@@ -864,7 +864,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Зарплата", "Ответсвенность"
+                "Id", "Название книги", "Автор", "Id издательства", "Дата публикации", "Id жанра"
             }
         ));
         jTable14.setCellSelectionEnabled(true);
@@ -918,7 +918,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Зарплата", "Ответсвенность"
+                "Id", "ФИО", "День рождения", "Пол", "Адрес", "Телефон", "Паспорт"
             }
         ));
         jTable15.setCellSelectionEnabled(true);
@@ -972,7 +972,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Должность", "Зарплата", "Ответсвенность"
+                "Id книги", "Id читателя", "Дата выдачи", "Id сотрудника"
             }
         ));
         jTable16.setCellSelectionEnabled(true);
@@ -1014,7 +1014,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 .addContainerGap(76, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("Книги в наличии", jPanel16);
+        jTabbedPane3.addTab("Выданные книги", jPanel16);
 
         jTabbedPane1.addTab("Добавить в базу", jTabbedPane3);
 

@@ -826,7 +826,7 @@
                     <Component class="javax.swing.JTable" name="jTable5">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x417;&#x430;&#x440;&#x43f;&#x43b;&#x430;&#x442;&#x430;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x41e;&#x43a;&#x43b;&#x430;&#x434;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x442;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x422;&#x440;&#x435;&#x431;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x44f;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                         <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
@@ -903,7 +903,7 @@
                     <Component class="javax.swing.JTable" name="jTable11">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x417;&#x430;&#x440;&#x43f;&#x43b;&#x430;&#x442;&#x430;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x424;&#x418;&#x41e;&quot;, &quot;&#x412;&#x43e;&#x437;&#x440;&#x430;&#x441;&#x442;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;, &quot;&#x422;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&quot;, &quot;&#x41f;&#x430;&#x441;&#x43f;&#x43e;&#x440;&#x442;&quot;, &quot;Id &#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x438;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                         <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
@@ -980,7 +980,7 @@
                     <Component class="javax.swing.JTable" name="jTable12">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x417;&#x430;&#x440;&#x43f;&#x43b;&#x430;&#x442;&#x430;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x438;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x441;&#x442;&#x432;&#x430;&quot;, &quot;&#x413;&#x43e;&#x440;&#x43e;&#x434;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                         <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
@@ -1057,7 +1057,7 @@
                     <Component class="javax.swing.JTable" name="jTable13">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x417;&#x430;&#x440;&#x43f;&#x43b;&#x430;&#x442;&#x430;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x416;&#x430;&#x43d;&#x440;&quot;, &quot;&#x41e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                         <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
@@ -1134,7 +1134,7 @@
                     <Component class="javax.swing.JTable" name="jTable14">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x417;&#x430;&#x440;&#x43f;&#x43b;&#x430;&#x442;&#x430;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43a;&#x43d;&#x438;&#x433;&#x438;&quot;, &quot;&#x410;&#x432;&#x442;&#x43e;&#x440;&quot;, &quot;Id &#x438;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x441;&#x442;&#x432;&#x430;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x43f;&#x443;&#x431;&#x43b;&#x438;&#x43a;&#x430;&#x446;&#x438;&#x438;&quot;, &quot;Id &#x436;&#x430;&#x43d;&#x440;&#x430;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                         <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
@@ -1211,7 +1211,7 @@
                     <Component class="javax.swing.JTable" name="jTable15">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x417;&#x430;&#x440;&#x43f;&#x43b;&#x430;&#x442;&#x430;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x424;&#x418;&#x41e;&quot;, &quot;&#x414;&#x435;&#x43d;&#x44c; &#x440;&#x43e;&#x436;&#x434;&#x435;&#x43d;&#x438;&#x44f;&quot;, &quot;&#x41f;&#x43e;&#x43b;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;, &quot;&#x422;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&quot;, &quot;&#x41f;&#x430;&#x441;&#x43f;&#x43e;&#x440;&#x442;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                         <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
@@ -1231,8 +1231,8 @@
             <Container class="javax.swing.JPanel" name="jPanel16">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="&#x41a;&#x43d;&#x438;&#x433;&#x438; &#x432; &#x43d;&#x430;&#x43b;&#x438;&#x447;&#x438;&#x438;">
-                    <Property name="tabTitle" type="java.lang.String" value="&#x41a;&#x43d;&#x438;&#x433;&#x438; &#x432; &#x43d;&#x430;&#x43b;&#x438;&#x447;&#x438;&#x438;"/>
+                  <JTabbedPaneConstraints tabName="&#x412;&#x44b;&#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43a;&#x43d;&#x438;&#x433;&#x438;">
+                    <Property name="tabTitle" type="java.lang.String" value="&#x412;&#x44b;&#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43a;&#x43d;&#x438;&#x433;&#x438;"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -1288,7 +1288,7 @@
                     <Component class="javax.swing.JTable" name="jTable16">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id&quot;, &quot;&#x414;&#x43e;&#x43b;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;, &quot;&#x417;&#x430;&#x440;&#x43f;&#x43b;&#x430;&#x442;&#x430;&quot;, &quot;&#x41e;&#x442;&#x432;&#x435;&#x442;&#x441;&#x432;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Id &#x43a;&#x43d;&#x438;&#x433;&#x438;&quot;, &quot;Id &#x447;&#x438;&#x442;&#x430;&#x442;&#x435;&#x43b;&#x44f;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x432;&#x44b;&#x434;&#x430;&#x447;&#x438;&quot;, &quot;Id &#x441;&#x43e;&#x442;&#x440;&#x443;&#x434;&#x43d;&#x438;&#x43a;&#x430;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                         <Property name="cellSelectionEnabled" type="boolean" value="true"/>
                       </Properties>
