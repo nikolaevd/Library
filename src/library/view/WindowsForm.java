@@ -6,8 +6,8 @@
 package library.view;
 
 import java.util.List;
-import javax.swing.table.TableColumn;
 import library.model.get.*;
+import library.model.set.*;
 
 /**
  *
@@ -1066,7 +1066,11 @@ public class WindowsForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         String str1 = jTable5.getValueAt(0, 0).toString();
         String str2 = jTable5.getValueAt(0, 1).toString();
-        System.out.println(str1 + " " + str2);
+        String str3 = jTable5.getValueAt(0, 2).toString();
+        String str4 = jTable5.getValueAt(0, 3).toString();
+        String str5 = jTable5.getValueAt(0, 4).toString();
+        boolean result = new PositionSet().setData(str1, str2, str3, str4, str5);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
