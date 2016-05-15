@@ -970,7 +970,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id книги", "Id читателя", "Дата выдачи", "Id сотрудника"
+                "Id книги", "Id читателя", "Дата выдачи", "Книга возвращена", "Id сотрудника"
             }
         ));
         jTable16.setCellSelectionEnabled(true);
@@ -1219,22 +1219,57 @@ public class WindowsForm extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        String str1 = jTable12.getValueAt(0, 0).toString();
+        String str2 = jTable12.getValueAt(0, 1).toString();
+        String str3 = jTable12.getValueAt(0, 2).toString();
+        String str4 = jTable12.getValueAt(0, 3).toString();
+        boolean result = new PublishingHouseSet().setData(str1, str2, str3, str4);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        String str1 = jTable13.getValueAt(0, 0).toString();
+        String str2 = jTable13.getValueAt(0, 1).toString();
+        String str3 = jTable13.getValueAt(0, 2).toString();
+        boolean result = new GenreSet().setData(str1, str2, str3);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
+        String str1 = jTable14.getValueAt(0, 0).toString();
+        String str2 = jTable14.getValueAt(0, 1).toString();
+        String str3 = jTable14.getValueAt(0, 2).toString();
+        String str4 = jTable14.getValueAt(0, 3).toString();
+        String str5 = jTable14.getValueAt(0, 4).toString();
+        String str6 = jTable14.getValueAt(0, 5).toString();
+        boolean result = new BookSet().setData(str1, str2, str3, str4, str5, str6);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+        String str1 = jTable15.getValueAt(0, 0).toString();
+        String str2 = jTable15.getValueAt(0, 1).toString();
+        String str3 = jTable15.getValueAt(0, 2).toString();
+        String str4 = jTable15.getValueAt(0, 3).toString();
+        String str5 = jTable15.getValueAt(0, 4).toString();
+        String str6 = jTable15.getValueAt(0, 5).toString();
+        String str7 = jTable15.getValueAt(0, 6).toString();
+        boolean result = new ReaderSet().setData(str1, str2, str3, str4, str5, str6, str7);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
+        String str1 = jTable16.getValueAt(0, 0).toString();
+        String str2 = jTable16.getValueAt(0, 1).toString();
+        String str3 = jTable16.getValueAt(0, 2).toString();
+        String str4 = jTable16.getValueAt(0, 3).toString();
+        String str5 = jTable16.getValueAt(0, 4).toString();
+        boolean result = new IssuedBookSet().setData(str1, str2, str3, str4, str5);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
