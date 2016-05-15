@@ -11,4 +11,12 @@ package library.model.set;
  */
 public class GenreSet {
     
+    public boolean setData(String id, String name, String description){
+        
+        String sql = "INSERT INTO genres(id, name, description) VALUES " +
+                "(" + id + ", '" + name + "', '" + description + "');";
+        
+        SetData setData = new SetData();
+        return setData.execute(sql);        
+    }
 }

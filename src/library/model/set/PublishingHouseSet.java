@@ -11,4 +11,12 @@ package library.model.set;
  */
 public class PublishingHouseSet {
     
+    public boolean setData(String id, String name, String city, String address){
+        
+        String sql = "INSERT INTO publishing_house(id, name, city, address) " +
+                "VALUES (" + id + ", '" + name + "', '" + city + "', '" + address + "');";
+        
+        SetData setData = new SetData();
+        return setData.execute(sql);        
+    }
 }

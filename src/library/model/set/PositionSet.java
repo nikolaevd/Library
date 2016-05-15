@@ -21,22 +21,8 @@ public class PositionSet {
                 "', " + salary + ", '" + responsibility + "', " +
                 "'" + requirements + "');";
         
-        try(Connection connection = new LibraryDB().getConnection()){
-            
-            Statement statement = connection.createStatement();
-            statement.execute(sql);
-            return true;
-        }
-        catch(SQLException e){
-            e.printStackTrace();
-        }
-        catch(ClassNotFoundException e){
-            e.printStackTrace();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        SetData setData = new SetData();
+        return setData.execute(sql);
         
-        return false;
     } 
 }
