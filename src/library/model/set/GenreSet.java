@@ -5,10 +5,6 @@
  */
 package library.model.set;
 
-/**
- *
- * @author Nikolaev
- */
 public class GenreSet {
     
     public boolean setData(String id, String name, String description){

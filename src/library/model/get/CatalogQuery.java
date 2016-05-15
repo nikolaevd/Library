@@ -10,10 +10,6 @@ import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- *
- * @author nikol_000
- */
 public class CatalogQuery {
     
     private List<CatalogData> dataList;

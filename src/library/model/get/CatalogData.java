@@ -5,10 +5,6 @@
  */
 package library.model.get;
 
-/**
- *
- * @author nikol_000
- */
 public class CatalogData {
     
     private String name;

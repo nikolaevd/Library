@@ -5,10 +5,6 @@
  */
 package library.model.get;
 
-/**
- *
- * @author Nikolaev
- */
 public class IssuedBooksData {
     
     private String book;

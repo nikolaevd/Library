@@ -5,10 +5,6 @@
  */
 package library.model.set;
 
-/**
- *
- * @author Nikolaev
- */
 public class ReaderSet {
     
     public boolean setData(String id, String name, String birthday, String gender, String address, String phone, String passport){

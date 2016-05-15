@@ -10,10 +10,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import library.model.LibraryDB;
 
-/**
- *
- * @author Nikolaev
- */
 public class SetData {
     
     public boolean execute(String sql){

@@ -7,10 +7,6 @@ package library.model;
 
 import java.sql.*;
 
-/**
- *
- * @author nikol_000
- */
 public class LibraryDB {
     
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/library";

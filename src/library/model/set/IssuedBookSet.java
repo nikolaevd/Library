@@ -5,10 +5,6 @@
  */
 package library.model.set;
 
-/**
- *
- * @author Nikolaev
- */
 public class IssuedBookSet {
     
     public boolean setData(String book_id, String readership_id, String date_of_issue, String is_returned, String employee_id){

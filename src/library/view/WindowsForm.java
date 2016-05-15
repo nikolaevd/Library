@@ -9,10 +9,6 @@ import java.util.List;
 import library.model.get.*;
 import library.model.set.*;
 
-/**
- *
- * @author nikol
- */
 public class WindowsForm extends javax.swing.JFrame {
 
     /**

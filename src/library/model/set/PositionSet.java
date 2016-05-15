@@ -8,10 +8,6 @@ package library.model.set;
 import java.sql.*;
 import library.model.LibraryDB;
 
-/**
- *
- * @author Nikolaev
- */
 public class PositionSet {
     
     public boolean setData(String id, String position, String salary, String responsibility, String requirements){

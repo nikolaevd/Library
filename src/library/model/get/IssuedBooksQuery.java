@@ -10,10 +10,6 @@ import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- *
- * @author Nikolaev
- */
 public class IssuedBooksQuery {
     
     private List<IssuedBooksData> dataList;

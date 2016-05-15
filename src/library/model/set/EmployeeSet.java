@@ -5,10 +5,6 @@
  */
 package library.model.set;
 
-/**
- *
- * @author Nikolaev
- */
 public class EmployeeSet {
     
     public boolean setData(String id, String name, String age, String gender, String address, String phone, String passport, String position_id){
