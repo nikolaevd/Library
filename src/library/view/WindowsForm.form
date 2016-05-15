@@ -275,8 +275,8 @@
                               <Group type="102" attributes="0">
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jTextField1" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -359,12 +359,12 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jTextField2" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane6" alignment="0" pref="770" max="32767" attributes="0"/>
+                              <Component id="jScrollPane6" alignment="0" pref="790" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -445,11 +445,11 @@
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jTextField3" min="-2" pref="180" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane7" alignment="0" pref="770" max="32767" attributes="0"/>
+                              <Component id="jScrollPane7" alignment="0" pref="790" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -529,12 +529,12 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField4" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jTextField4" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Component id="jButton5" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane8" alignment="0" pref="770" max="32767" attributes="0"/>
+                              <Component id="jScrollPane8" alignment="0" pref="790" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -615,11 +615,11 @@
                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jComboBox1" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane9" alignment="0" pref="770" max="32767" attributes="0"/>
+                              <Component id="jScrollPane9" alignment="0" pref="790" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -665,7 +665,7 @@
                     <Component class="javax.swing.JTable" name="jTable9">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;&#x41a;&#x43d;&#x438;&#x433;&#x430;&quot;, &quot;&#x410;&#x432;&#x442;&#x43e;&#x440;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x438;&#x437;&#x434;&#x430;&#x43d;&#x438;&#x44f;&quot;, &quot;&#x416;&#x430;&#x43d;&#x440;&quot;, &quot;&#x41e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435;&quot;, &quot;&#x418;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x441;&#x442;&#x432;&#x43e;&quot;, &quot;&#x413;&#x43e;&#x440;&#x43e;&#x434;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;&#x41a;&#x43d;&#x438;&#x433;&#x430;&quot;, &quot;&#x410;&#x432;&#x442;&#x43e;&#x440;&quot;, &quot;&#x427;&#x438;&#x442;&#x430;&#x442;&#x435;&#x43b;&#x44c;&quot;, &quot;&#x422;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x432;&#x44b;&#x434;&#x430;&#x447;&#x438;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -702,11 +702,11 @@
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jTextField6" min="-2" pref="180" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane10" alignment="0" pref="770" max="32767" attributes="0"/>
+                              <Component id="jScrollPane10" alignment="0" pref="790" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -721,9 +721,9 @@
                               <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="jScrollPane10" min="-2" pref="160" max="-2" attributes="0"/>
-                          <EmptySpace pref="114" max="32767" attributes="0"/>
+                          <EmptySpace pref="107" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -736,7 +736,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField6">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x441;&#x435;&#x43d;&#x43a;&#x43e; &#x410;&#x43b;&#x435;&#x43a;&#x441;&#x430;&#x43d;&#x434;&#x440; &#x415;&#x432;&#x433;&#x435;&#x43d;&#x44c;&#x435;&#x432;&#x438;&#x447;"/>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x435;&#x440;&#x43e;&#x432; &#x421;&#x435;&#x440;&#x433;&#x435;&#x439; &#x42e;&#x440;&#x44c;&#x435;&#x432;&#x438;&#x447;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
@@ -760,7 +760,7 @@
                     <Component class="javax.swing.JTable" name="jTable10">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;&#x41a;&#x43d;&#x438;&#x433;&#x430;&quot;, &quot;&#x410;&#x432;&#x442;&#x43e;&#x440;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x438;&#x437;&#x434;&#x430;&#x43d;&#x438;&#x44f;&quot;, &quot;&#x416;&#x430;&#x43d;&#x440;&quot;, &quot;&#x41e;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435;&quot;, &quot;&#x418;&#x437;&#x434;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x441;&#x442;&#x432;&#x43e;&quot;, &quot;&#x413;&#x43e;&#x440;&#x43e;&#x434;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;&#xa;    }&#xa;)" type="code"/>
+                          <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null},&#xa;        {null, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;&#x41a;&#x43d;&#x438;&#x433;&#x430;&quot;, &quot;&#x410;&#x432;&#x442;&#x43e;&#x440;&quot;, &quot;&#x427;&#x438;&#x442;&#x430;&#x442;&#x435;&#x43b;&#x44c;&quot;, &quot;&#x422;&#x435;&#x43b;&#x435;&#x444;&#x43e;&#x43d;&quot;, &quot;&#x410;&#x434;&#x440;&#x435;&#x441;&quot;, &quot;&#x414;&#x430;&#x442;&#x430; &#x432;&#x44b;&#x434;&#x430;&#x447;&#x438;&quot;&#xa;    }&#xa;)" type="code"/>
                         </Property>
                       </Properties>
                     </Component>

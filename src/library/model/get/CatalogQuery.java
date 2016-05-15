@@ -71,8 +71,22 @@ public class CatalogQuery {
                         "FROM books b\n" +
                         "	JOIN publishing_house p ON p.id = b.publishing_house_id\n" +
                         "	JOIN genres g ON g.id = b.genre_id\n" +
-                "WHERE p.name = 'Дедушка Олехник';";
+                "WHERE p.name = '" + value + "';";
                 break;
+            case("author"):
+                sql = "SELECT b.name, b.author, b.date_of_publishing, g.name, g.description, p.name, p.city, p.address\n" +
+                        "FROM books b\n" +
+                        "	JOIN publishing_house p ON p.id = b.publishing_house_id\n" +
+                        "	JOIN genres g ON g.id = b.genre_id\n" +
+                        "WHERE b.author = '" + value + "';";
+                break;
+            case("date"):
+                sql = "SELECT b.name, b.author, b.date_of_publishing, g.name, g.description, p.name, p.city, p.address\n" +
+                        "FROM books b\n" +
+                        "	JOIN publishing_house p ON p.id = b.publishing_house_id\n" +
+                        "	JOIN genres g ON g.id = b.genre_id\n" +
+                        "WHERE b.date_of_publishing = '" + value + "';";
+                break; 
             default:
                 System.out.println("Ошибка...");
         }

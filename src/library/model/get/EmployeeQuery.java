@@ -64,7 +64,7 @@ public class EmployeeQuery {
     
     public List<EmployeeData> getData(String field, String value){
       
-        dataList = new LinkedList<EmployeeData>();
+        dataList = new LinkedList<>();
         
         switch(field){
             case("position"):

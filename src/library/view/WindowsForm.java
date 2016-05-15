@@ -296,7 +296,7 @@ public class WindowsForm extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -356,11 +356,11 @@ public class WindowsForm extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton3)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -421,7 +421,7 @@ public class WindowsForm extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton4)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -478,11 +478,11 @@ public class WindowsForm extends javax.swing.JFrame {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton5)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -517,7 +517,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Книга", "Автор", "Дата издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
+                "Книга", "Автор", "Читатель", "Телефон", "Адрес", "Дата выдачи"
             }
         ));
         jScrollPane9.setViewportView(jTable9);
@@ -538,7 +538,7 @@ public class WindowsForm extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton6)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE))
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
@@ -558,7 +558,7 @@ public class WindowsForm extends javax.swing.JFrame {
 
         jLabel10.setText("Пожалуйста, введите ФИО читателя");
 
-        jTextField6.setText("Косенко Александр Евгеньевич");
+        jTextField6.setText("Серов Сергей Юрьевич");
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -580,7 +580,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Книга", "Автор", "Дата издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
+                "Книга", "Автор", "Читатель", "Телефон", "Адрес", "Дата выдачи"
             }
         ));
         jScrollPane10.setViewportView(jTable10);
@@ -599,7 +599,7 @@ public class WindowsForm extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton7)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE))
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
@@ -610,9 +610,9 @@ public class WindowsForm extends javax.swing.JFrame {
                     .addComponent(jLabel10)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("По читателям", jPanel11);
@@ -767,6 +767,24 @@ public class WindowsForm extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        List<CatalogData> list = new CatalogQuery().getData("author", jTextField3.getText());
+        Object[][] obj = new Object[list.size()][8];
+        for(int i = 0; i < list.size(); i++){
+            obj[i][0] = list.get(i).getName();
+            obj[i][1] = list.get(i).getAuthor();
+            obj[i][2] = list.get(i).getDate();
+            obj[i][3] = list.get(i).getGenre();
+            obj[i][4] = list.get(i).getDescription();
+            obj[i][5] = list.get(i).getPublishingHouse();
+            obj[i][6] = list.get(i).getCity();
+            obj[i][7] = list.get(i).getAddress();
+        }
+        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+                obj,
+                new String [] {
+                        "Книга", "Автор", "Дата издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
+                }
+        ));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
@@ -775,10 +793,47 @@ public class WindowsForm extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        List<CatalogData> list = new CatalogQuery().getData("date", jTextField4.getText());
+        Object[][] obj = new Object[list.size()][8];
+        for(int i = 0; i < list.size(); i++){
+            obj[i][0] = list.get(i).getName();
+            obj[i][1] = list.get(i).getAuthor();
+            obj[i][2] = list.get(i).getDate();
+            obj[i][3] = list.get(i).getGenre();
+            obj[i][4] = list.get(i).getDescription();
+            obj[i][5] = list.get(i).getPublishingHouse();
+            obj[i][6] = list.get(i).getCity();
+            obj[i][7] = list.get(i).getAddress();
+        }
+        jTable8.setModel(new javax.swing.table.DefaultTableModel(
+                obj,
+                new String [] {
+                        "Книга", "Автор", "Дата издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
+                }
+        ));
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        String comboBox = String.valueOf(jComboBox1.getSelectedItem());
+        if(comboBox.equals("Сданные")) comboBox = "true";
+        else comboBox = "false";
+        List<IssuedBooksData> list = new IssuedBooksQuery().getData("is_returned", comboBox);
+        Object[][] obj = new Object[list.size()][6];
+        for(int i = 0; i < list.size(); i++){
+            obj[i][0] = list.get(i).getBook();
+            obj[i][1] = list.get(i).getAuthor();
+            obj[i][2] = list.get(i).getReader();
+            obj[i][3] = list.get(i).getPhone();
+            obj[i][4] = list.get(i).getAddress();
+            obj[i][5] = list.get(i).getDate();
+        }
+        jTable9.setModel(new javax.swing.table.DefaultTableModel(
+                obj,
+                new String [] {
+                        "Книга", "Автор", "Читатель", "Телефон", "Адрес", "Дата выдачи"
+                }
+        ));  
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
@@ -787,6 +842,22 @@ public class WindowsForm extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        List<IssuedBooksData> list = new IssuedBooksQuery().getData("reader", jTextField6.getText());
+        Object[][] obj = new Object[list.size()][6];
+        for(int i = 0; i < list.size(); i++){
+            obj[i][0] = list.get(i).getBook();
+            obj[i][1] = list.get(i).getAuthor();
+            obj[i][2] = list.get(i).getReader();
+            obj[i][3] = list.get(i).getPhone();
+            obj[i][4] = list.get(i).getAddress();
+            obj[i][5] = list.get(i).getDate();
+        }
+        jTable10.setModel(new javax.swing.table.DefaultTableModel(
+                obj,
+                new String [] {
+                        "Книга", "Автор", "Читатель", "Телефон", "Адрес", "Дата выдачи"
+                }
+        ));
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
