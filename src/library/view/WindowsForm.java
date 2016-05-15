@@ -32,8 +32,10 @@ public class WindowsForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -59,8 +61,13 @@ public class WindowsForm extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 375));
         setResizable(false);
 
+        jLabel3.setVisible(false);
         CatalogQuery query = new CatalogQuery();
         List<CatalogData> list = query.getData();
+        if(list.isEmpty()){
+            jScrollPane1.setVisible(false);
+            jLabel3.setVisible(true);
+        }
         Object[][] obj = new Object[list.size()][8];
         for(int i = 0; i < list.size(); i++){
             obj[i][0] = list.get(i).getName();
@@ -81,7 +88,32 @@ public class WindowsForm extends javax.swing.JFrame {
         jTable1.setCellSelectionEnabled(true);
         jScrollPane1.setViewportView(jTable1);
 
-        jTabbedPane1.addTab("Каталог", jScrollPane1);
+        jLabel3.setText("Простите, но я не смог получить данные... :( Пожалуйста, убедитесь в корректности настройки подключения к базе.");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel3)
+                .addContainerGap(138, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(65, 65, 65))
+        );
+
+        jTabbedPane1.addTab("Каталог", jPanel4);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -334,9 +366,11 @@ public class WindowsForm extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
