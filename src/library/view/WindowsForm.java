@@ -699,7 +699,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "ФИО", "Возраст", "Адрес", "Телефон", "Паспорт", "Id должности"
+                "Id", "ФИО", "Возраст", "Пол", "Адрес", "Телефон", "Паспорт", "Id должности"
             }
         ));
         jTable11.setCellSelectionEnabled(true);
@@ -1073,6 +1073,13 @@ public class WindowsForm extends javax.swing.JFrame {
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
+        String str1 = jTable5.getValueAt(0, 0).toString();
+        String str2 = jTable5.getValueAt(0, 1).toString();
+        String str3 = jTable5.getValueAt(0, 2).toString();
+        String str4 = jTable5.getValueAt(0, 3).toString();
+        String str5 = jTable5.getValueAt(0, 4).toString();
+        boolean result = new PositionSet().setData(str1, str2, str3, str4, str5);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -1198,6 +1205,16 @@ public class WindowsForm extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        String str1 = jTable11.getValueAt(0, 0).toString();
+        String str2 = jTable11.getValueAt(0, 1).toString();
+        String str3 = jTable11.getValueAt(0, 2).toString();
+        String str4 = jTable11.getValueAt(0, 3).toString();
+        String str5 = jTable11.getValueAt(0, 4).toString();
+        String str6 = jTable11.getValueAt(0, 5).toString();
+        String str7 = jTable11.getValueAt(0, 6).toString();
+        String str8 = jTable11.getValueAt(0, 7).toString();
+        boolean result = new EmployeeSet().setData(str1, str2, str3, str4, str5, str6, str7, str8);
+        if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed

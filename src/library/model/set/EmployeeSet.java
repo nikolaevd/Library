@@ -13,10 +13,10 @@ public class EmployeeSet {
     
     public boolean setData(String id, String name, String age, String gender, String address, String phone, String passport, String position_id){
         
-        String sql = "NSERT INTO employees (id, name, age, gender, address, " + 
+        String sql = "INSERT INTO employees (id, name, age, gender, address, " + 
                 "phone, passport, position_id) VALUES (" + id + "," + 
-                "'" + name + "', " + age + ", '" + gender + "', +"
-                + "'" + address + "', '" + phone + "', '" + passport + "', " + position_id + ");";
+                "'" + name + "', " + age + ", '" + gender + "'," +
+                "'" + address + "', '" + phone + "', '" + passport + "', " + position_id + ");";
         
         SetData setData = new SetData();
         return setData.execute(sql);
