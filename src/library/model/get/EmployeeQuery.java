@@ -87,9 +87,15 @@ public class EmployeeQuery {
             while(resultSet.next()){
                 EmployeeData data = new EmployeeData();
                 data.setName(resultSet.getString(1));
-                data.setPhone(resultSet.getString(5));
+                data.setAge(resultSet.getString(2));
+                data.setGender(resultSet.getString(3));
                 data.setAddress(resultSet.getString(4));
+                data.setPhone(resultSet.getString(5));
+                data.setPassport(resultSet.getString(6));
+                data.setPosition(resultSet.getString(7));
                 data.setSalary(resultSet.getString(8));
+                data.setResponsibility(resultSet.getString(9));
+                data.setRequirements(resultSet.getString(10));
                 dataList.add(data);
             }
         }

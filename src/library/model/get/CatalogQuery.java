@@ -66,12 +66,12 @@ public class CatalogQuery {
         dataList = new LinkedList<>();
         
         switch(field){
-            case("position"):
-                sql = "SELECT e.name, e.age, e.gender, e.address, e.phone, " +
-                        "e.passport, p.position, p.salary, p.responsibility, p.requirements\n" +
-                        "FROM employees e\n" +
-                        "	JOIN positions p ON p.id = e.position_id\n" +
-                        "WHERE p.position = '" + value + "'";
+            case("publishing_house"):
+                sql = "SELECT b.name, b.author, b.date_of_publishing, g.name, g.description, p.name, p.city, p.address\n" +
+                        "FROM books b\n" +
+                        "	JOIN publishing_house p ON p.id = b.publishing_house_id\n" +
+                        "	JOIN genres g ON g.id = b.genre_id\n" +
+                "WHERE p.name = 'Дедушка Олехник';";
                 break;
             default:
                 System.out.println("Ошибка...");
@@ -86,9 +86,12 @@ public class CatalogQuery {
                 CatalogData data = new CatalogData();
                 data.setName(resultSet.getString(1));
                 data.setAuthor(resultSet.getString(2));
+                data.setDate(resultSet.getString(3));
                 data.setGenre(resultSet.getString(4));
+                data.setDescription(resultSet.getString(5));
                 data.setPublishingHouse(resultSet.getString(6));
-                // и т.д.
+                data.setCity(resultSet.getString(7));
+                data.setAddress(resultSet.getString(8));
                 dataList.add(data);
             }
             
