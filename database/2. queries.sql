@@ -10,7 +10,7 @@ FROM employees e
 -- Query: вывести всю информацию по книжному каталогу
 ----------------------------------------------------
 
-SELECT b.name, b.author, b.date_of_publishing, g.name, g.description, p.name, p.city, p.address
+SELECT b.name, b.author, b.year_of_publishing, g.name, g.description, p.name, p.city, p.address
 FROM books b
 	JOIN publishing_house p ON p.id = b.publishing_house_id
 	JOIN genres g ON g.id = b.genre_id;

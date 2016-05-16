@@ -140,7 +140,7 @@ public class WindowsForm extends javax.swing.JFrame {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             catDataObj,
             new String [] {
-                "Книга", "Автор", "Дата издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
+                "Книга", "Автор", "Год издания", "Жанр", "Описание", "Издательство", "Город", "Адрес"
             }
         ));
         jTable1.setCellSelectionEnabled(true);
@@ -469,7 +469,7 @@ public class WindowsForm extends javax.swing.JFrame {
 
         jLabel8.setText("Пожалуйста, введите дату издания");
 
-        jTextField4.setText("2013-01-08");
+        jTextField4.setText("2013");
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -513,7 +513,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 .addContainerGap(107, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("По дате издания", jPanel9);
+        jTabbedPane2.addTab("По году издания", jPanel9);
 
         jLabel9.setText("Пожалуйста, выберите статус наличия книг");
 
@@ -858,7 +858,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id", "Название книги", "Автор", "Id издательства", "Дата публикации", "Id жанра"
+                "Id", "Количество экземпляров", "Название книги", "Автор", "Id издательства", "Год публикации", "Id жанра"
             }
         ));
         jTable14.setCellSelectionEnabled(true);
@@ -966,7 +966,7 @@ public class WindowsForm extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Id книги", "Id читателя", "Дата выдачи", "Книга возвращена", "Id сотрудника"
+                "Код выдачи", "Id книги", "Id читателя", "Дата выдачи", "Дата возврата", "Книга возвращена", "Id сотрудника"
             }
         ));
         jTable16.setCellSelectionEnabled(true);
@@ -1240,7 +1240,8 @@ public class WindowsForm extends javax.swing.JFrame {
         String str4 = jTable14.getValueAt(0, 3).toString();
         String str5 = jTable14.getValueAt(0, 4).toString();
         String str6 = jTable14.getValueAt(0, 5).toString();
-        boolean result = new BookSet().setData(str1, str2, str3, str4, str5, str6);
+        String str7 = jTable14.getValueAt(0, 6).toString();
+        boolean result = new BookSet().setData(str1, str2, str3, str4, str5, str6, str7);
         if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton11ActionPerformed
 
@@ -1264,7 +1265,9 @@ public class WindowsForm extends javax.swing.JFrame {
         String str3 = jTable16.getValueAt(0, 2).toString();
         String str4 = jTable16.getValueAt(0, 3).toString();
         String str5 = jTable16.getValueAt(0, 4).toString();
-        boolean result = new IssuedBookSet().setData(str1, str2, str3, str4, str5);
+        String str6 = jTable16.getValueAt(0, 5).toString();
+        String str7 = jTable16.getValueAt(0, 6).toString();
+        boolean result = new IssuedBookSet().setData(str1, str2, str3, str4, str5, str6, str7);
         if(!result) System.out.println("Что-то пошло не так...");
     }//GEN-LAST:event_jButton13ActionPerformed
 

@@ -95,10 +95,11 @@ INSERT INTO genres(id, name, description) VALUES (4, 'Постмодернизм
 
 CREATE TABLE books(
 	id integer NOT NULL,
+	instances int,
 	name varchar(32) NOT NULL,
 	author varchar(32),
 	publishing_house_id integer,
-	date_of_publishing date,
+	year_of_publishing int,
 	genre_id integer,
 	CONSTRAINT key_book PRIMARY KEY (id),
 	CONSTRAINT key_publishing_house_id FOREIGN KEY (publishing_house_id)
@@ -109,16 +110,16 @@ CREATE TABLE books(
 WITH ( OIDS=FALSE );
 ALTER TABLE books OWNER TO postgres;
 
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (0, 'Декамерон', 'Джованни Боккаччо', 3, '2013-01-08', 3);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (1, 'Дон Кихот', 'Мигель де Сервантес Сааведра', 3, '2014-07-01', 3);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (2, 'Приключения Тома Сойера', 'Марк Твен', 1, '2010-01-20', 4);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (3, 'Одиссея', 'Гомер', 0, '2011-02-23', 0);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (4, 'Илиада', 'Гомер', 0, '2009-09-15', 0);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (5, 'Айвенго', 'Вальтер Скотт', 1, '2010-06-15', 3);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (6, 'Беовульф', 'Неизвестен', 2, '2015-03-10', 2);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (7, 'Generation П', 'Виктор Пелевин', 4, '2013-01-08', 4);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (8, 'Сон в летнюю ночь', 'Уильям Шекспир', 3, '2013-01-08', 3);
-INSERT INTO books (id, name, author, publishing_house_id, date_of_publishing, genre_id) VALUES (9, 'Гамлет', 'Уильям Шекспир', 3, '2010-02-13', 3);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (0, 15, 'Декамерон', 'Джованни Боккаччо', 3, 2013, 3);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (1, 20, 'Дон Кихот', 'Мигель де Сервантес Сааведра', 3, 2014, 3);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (2, 13, 'Приключения Тома Сойера', 'Марк Твен', 1, 2014, 4);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (3, 10, 'Одиссея', 'Гомер', 0, 2014, 0);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (4, 12, 'Илиада', 'Гомер', 0, 2009, 0);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (5, 14, 'Айвенго', 'Вальтер Скотт', 1, 2010, 3);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (6, 17, 'Беовульф', 'Неизвестен', 2, 2010, 2);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (7, 20, 'Generation П', 'Виктор Пелевин', 4, 2013, 4);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (8, 21, 'Сон в летнюю ночь', 'Уильям Шекспир', 3, 2013, 3);
+INSERT INTO books (id, instances, name, author, publishing_house_id, year_of_publishing, genre_id) VALUES (9, 11, 'Гамлет', 'Уильям Шекспир', 3, 2010, 3);
 
 ----------------------------------------------------
 -- Table: readership
@@ -153,11 +154,14 @@ INSERT INTO readership (id, name, birthday, gender, address, phone, passport) VA
 ----------------------------------------------------
 
 CREATE TABLE issued_books(
+	id int NOT NULL,
 	book_id integer NOT NULL,
 	readership_id integer NOT NULL,
 	date_of_issue date,
+	return_date date,
 	is_returned boolean,
 	employee_id integer,
+	CONSTRAINT key_issued_books PRIMARY KEY (id),
 	CONSTRAINT key_book_id FOREIGN KEY (book_id)
 		REFERENCES books (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION,
 	CONSTRAINT key_readership_id FOREIGN KEY (readership_id)
@@ -168,13 +172,13 @@ CREATE TABLE issued_books(
 WITH ( OIDS=FALSE );
 ALTER TABLE issued_books OWNER TO postgres;
 
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (0, 0, '2016-03-21', false, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (2, 0, '2016-04-01', false, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (3, 1, '2015-09-10', true, 1);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (4, 1, '2016-01-10', false, 2);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (5, 2, '2016-02-10', true, 3);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (3, 3, '2016-03-21', false, 0);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (6, 5, '2016-01-13', false, 2);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (7, 6, '2015-09-30', false, 3);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (8, 8, '2015-12-30', false, 1);
-INSERT INTO issued_books (book_id, readership_id, date_of_issue, is_returned, employee_id) VALUES (9, 9, '2016-02-28', true, 4);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (0, 0, 0, '2016-03-21', NULL, false, 0);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (1, 2, 0, '2016-04-01', NULL, false, 0);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (2, 3, 1, '2015-09-10', '2016-03-12', true, 1);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (3, 4, 1, '2016-01-10', NULL, false, 2);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (4, 5, 2, '2016-02-10', '2016-05-21', true, 3);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (5, 3, 3, '2016-03-21', NULL, false, 0);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (6, 6, 5, '2016-01-13', NULL, false, 2);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (7, 7, 6, '2015-09-30', NULL, false, 3);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (8, 8, 8, '2015-12-30', NULL, false, 1);
+INSERT INTO issued_books (id, book_id, readership_id, date_of_issue, return_date, is_returned, employee_id) VALUES (9, 9, 9, '2016-02-28', '2016-01-21', true, 4);
